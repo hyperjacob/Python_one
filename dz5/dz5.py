@@ -1,6 +1,6 @@
 print("------Задание 1-------")
 
-with open("file.txt", "w+") as f_obj:
+with open("file.txt", "w+", encoding="utf-8") as f_obj:
     i = 0
     print("Введите несколько строк текста, для завершения ввод оставьте строку пустой")
     while True:
@@ -14,7 +14,7 @@ print("------Задание 2-------")
 with open("text_z2.txt", "a") as f_obj:
     f_obj.write('stroka stroka stroka\n')
 
-with open("text_z2.txt", "r") as f_obj:
+with open("text_z2.txt", "r", encoding="utf-8") as f_obj:
     i = 0
     for line in f_obj:
         i += 1
@@ -26,7 +26,7 @@ with open("text_z2.txt", "r") as f_obj:
 
 print("------Задание 3-------")
 try:
-    with open("text_z3.txt", "r") as f_obj:
+    with open("text_z3.txt", "r", encoding="utf-8") as f_obj:
         full_money = 0
         poor_man = []
         i = 0
@@ -48,13 +48,13 @@ import os
 os.remove("text-z4_new.txt")
 dictionary = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
 try:
-    with open("text_z4.txt", "r") as f_obj:
+    with open("text_z4.txt", "r", encoding="utf-8") as f_obj:
         for line in f_obj:
             word = line.split(" ")
             word[0] = dictionary[word[0]]
             words = ' '.join(word)
             print(words)
-            with open("text-z4_new.txt", "a") as r_obj:
+            with open("text-z4_new.txt", "a", encoding="utf-8") as r_obj:
                 r_obj.write(words)
 except IOError:
     print("Файл text_z4.txt не найден")
@@ -80,7 +80,7 @@ number = ""
 summa = 0
 flag = False
 try:
-    with open("text_z6.txt") as read_f:
+    with open("text_z6.txt", encoding="utf-8") as read_f:
         for line in read_f:
             temp = line.split(":")
             for char in temp[1]:
@@ -102,7 +102,7 @@ print(predmet)
 print("------Задание 7-------")
 import json
 try:
-    with open("text-z7.txt") as read_f:
+    with open("text-z7.txt", encoding="utf-8") as read_f:
         profit_sum = 0
         i = 0
         firm_list = {}
