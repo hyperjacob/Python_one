@@ -22,13 +22,13 @@ print("______Задание 5______")
 from functools import reduce
 
 
-def plus(a, b):
-    return a + b
+def func(a, b):
+    return a * b
 
 my_list5 = [el for el in range(100, 1001) if el % 2 == 0]
 
-summa = reduce(plus, my_list5)
-print(summa)
+proizv = reduce(func, my_list5)
+print(proizv)
 
 print("______Задание 6______")
 import itertools
